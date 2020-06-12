@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+@import "normalize";
+@import "layout";
+@import "elements";
+
+body {
+  font: 400 14px/1 "Lato", sans-serif;
+  background: url("/img/tabs-bg.jpeg") no-repeat;
+  background-size: cover;
+  color: #b7bacd;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  text-decoration: none;
+}
+/* Layout */
+.ba-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 641px;
+}
+main {
+  padding-top: 145px;
+}
+.icon {
+  fill: #B7BACD;
+  width: 23px;
+  height: 23px;
+  padding-bottom: 14px;
+  margin: 0 auto;
+  &:hover{
+	fill: #ffffff;
+  }
+}
+#star {
+  fill: #ffdd3f;
+  width: 20px;
+  height: 19px;
+}
+#star-empty {
+  fill: #4b536b;
+}
+
+.tabs {
+  background: #212534;
+  // Start tabs-header
+  &-header {
+    background: #2b3040;
+    display: flex;
+    justify-content: space-between;
+    padding: 33px 56px 0 50px;
+    & .active {
+      border-bottom: 3px solid #ffffff;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 32px;
+      cursor: pointer;
+      &:hover {
+			border-bottom: 3px solid #ffffff;
+			color: #fdfdfd;
+      }
+    }
+  }
+  // end tabs-header
+  // Start tabs-content
+  &-content {
+    padding: 58px 41px 63px 48px;
+
+    &__item {
+      display: none;
+      justify-content: space-between;
+      &--left {
+        max-width: 101px;
+      }
+      &--right {
+        max-width: 301px;
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        & p {
+          max-width: 306px;
+          margin-bottom: 60px;
+        }
+      }
+    }
+    &__title {
+      font-size: 32px;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      color: #fdfdfd;
+      margin-bottom: 42px;
+    }
+    &__buy {
+      max-width: 313px;
+      display: flex;
+      justify-content: space-between;
+      & a {
+        border-radius: 6px;
+        font-size: 16px;
+        padding: 24px 34px 21px 36px;
+        background: #13e28d;
+        color: #ffffff;
+		  text-decoration: none;
+		  &:hover{
+			background: #ffffff;
+			color:  #13e28d;
+		  }
+      }
+    }
+    &__price {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  // end tabs-content
+}
+.price {
+  font-size: 32px;
+}
+.sale {
+  font-size: 12px;
+  color: #fedc3f;
+  margin-bottom: 8px;
+}
+.active {
+  color: white;
+  display: flex;
+}
